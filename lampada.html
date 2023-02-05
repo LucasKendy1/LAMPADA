@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lampada</title>
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: monocraft;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Automação residencial</h1>
+    
+    <img id="lampada" src="1.jpg" alt="" width="250px">
+    
+    <br>
+    <input type="button" id="ligar" value="Ligar" onclick="ligar()">
+    <input type="button" id="desligar" value="Desligar" onclick="desligar()" >
+    <br>
+    <input type="button" id='quebrar' value="N preciso mais dessa porra" onclick="quebrar()">
+    <script>
+        
+        let lampada=document.getElementById('lampada')
+
+        function islampadaquebrada(){
+            return lampada.src.indexOf('https://i.stack.imgur.com/MRjsF.jpg') > -1
+        }
+
+        lampada.addEventListener('mouseenter',ligar)
+        lampada.addEventListener('mouseout',desligar)
+        lampada.addEventListener('dblclick',quebrar) 
+        
+        
+        function ligar(){
+            if(!islampadaquebrada()){
+               //lampada.src='3.jpg' 
+               lampada.src='https://i.stack.imgur.com/ybxlO.jpg'
+            }
+        }
+        function desligar(){
+            if(!islampadaquebrada()){
+                //lampada.src='1.jpg'
+                lampada.src='https://i.stack.imgur.com/b983w.jpg'
+            }
+        }
+        function quebrar(){
+            //lampada.src='2.jpg'
+            lampada.src='https://i.stack.imgur.com/MRjsF.jpg'
+        }  
+    </script>
+</body>
+</html>
